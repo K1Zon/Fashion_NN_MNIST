@@ -18,7 +18,7 @@ weights_hidden_to_output = loaded_params['weights_hidden_to_output']
 bias_input_to_hidden = loaded_params['bias_input_to_hidden']
 bias_hidden_to_output = loaded_params['bias_hidden_to_output']
 
-path = 'file_path.jpg'
+path = 'datasets+test_photo/Blue_Tshirt.jpg'
 test_image = image_converter(path)
 image = np.reshape(test_image, (-1, 1))
 

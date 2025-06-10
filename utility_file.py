@@ -2,7 +2,7 @@ import numpy as np
 from PIL import Image
 
 def load_dataset():
-    image_path = 'datasets/train-images-idx3-ubyte'
+    image_path = 'datasets+test_photo/train-images-idx3-ubyte'
 
     with open(image_path, 'rb') as f:
         # Чтение магического числа и количества изображений
@@ -19,7 +19,7 @@ def load_dataset():
         x_train = x_train.astype('float32') / 255
 
 
-    labels_path = 'datasets/train-labels-idx1-ubyte'
+    labels_path = 'datasets+test_photo/train-labels-idx1-ubyte'
 
     with open(labels_path, 'rb') as f:
         # Чтение магического числа и количества меток
@@ -36,7 +36,7 @@ def load_dataset():
     return x_train, y_train
 
 def load_dataset_test():
-    image_path = 't10k-images-idx3-ubyte'
+    image_path = 'datasets+test_photo/t10k-images-idx3-ubyte'
 
     with open(image_path, 'rb') as f:
         # Чтение магического числа и количества изображений
@@ -53,7 +53,7 @@ def load_dataset_test():
         x_train = image_data.reshape(10000, 784)
         x_train = x_train.astype('float32') / 255
 
-    labels_path = 't10k-labels-idx1-ubyte'
+    labels_path = 'datasets+test_photo/t10k-labels-idx1-ubyte'
 
     with open(labels_path, 'rb') as f:
         # Чтение магического числа и количества меток
